@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
     description: "Real-time AI Teaching Platform",
-    title: "Converso",
+    title: "SmartScholar",
 };
 
 export default function RootLayout({
