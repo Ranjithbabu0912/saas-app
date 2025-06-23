@@ -32,6 +32,7 @@ const Profile = async () => {
             alt={user.firstName!}
             width={110}
             height={110}
+            className="rounded-lg"
           />
           <div className="flex flex-col gap-2">
             <h1 className="font-bold text-2xl">
