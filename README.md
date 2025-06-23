@@ -29,7 +29,7 @@
 | ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white) | Realtime database & backend      |
 | ![Vapi](https://img.shields.io/badge/Vapi.ai-AI%20Voice-ff7f50) | AI voice assistant platform      |
 | ![Vercel Deploy](https://vercel.com/button) |(https://saas-app-ranjithbabu0912s-projects.vercel.app/) |
-| ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  |LICENSE        |
+| ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  |(https://github.com/Ranjithbabu0912/saas-app?tab=MIT-1-ov-file) |
 
 ---
 
