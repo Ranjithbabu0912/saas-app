@@ -18,28 +18,33 @@ export const createCompanion = async (formData: CreateCompanion) => {
     return data[0];
 }
 
-export const getAllCompanions = async ({ limit = 10, page = 1, subject, topic }: GetAllCompanions) => {
+export const getAllCompanions = async ({ limit }: { limit: number }) => {
     const supabase = createSupabaseClient();
+    const { userId } = await auth();
 
-    let query = supabase.from('companions').select();
+    const { data: companions, error: compErr } = await supabase
+        .from('companions')
+        .select('*')
+        .limit(limit);
 
-    if (subject && topic) {
-        query = query.ilike('subject', `%${subject}%`)
-            .or(`topic.ilike.%${topic}%,name.ilike.%${topic}%`)
-    } else if (subject) {
-        query = query.ilike('subject', `%${subject}%`)
-    } else if (topic) {
-        query = query.or(`topic.ilike.%${topic}%,name.ilike.%${topic}%`)
-    }
+    if (compErr || !companions) throw new Error(compErr?.message || "Failed to fetch companions");
 
-    query = query.range((page - 1) * limit, page * limit - 1);
+    const { data: bookmarks, error: bmErr } = await supabase
+        .from('bookmarks')
+        .select('companion_id')
+        .eq('user_id', userId);
 
-    const { data: companions, error } = await query;
+    if (bmErr) throw new Error(bmErr.message);
 
-    if (error) throw new Error(error.message);
+    const bookmarkedSet = new Set(bookmarks.map(b => b.companion_id));
 
-    return companions;
-}
+    return companions.map(companion => ({
+        ...companion,
+        bookmarked: bookmarkedSet.has(companion.id),
+    }));
+};
+
+
 
 export const getCompanion = async (id: string) => {
     const supabase = createSupabaseClient();
