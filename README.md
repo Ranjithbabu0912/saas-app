@@ -29,19 +29,17 @@
 | ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white) | Realtime database & backend      |
 | ![Vapi](https://img.shields.io/badge/Vapi.ai-AI%20Voice-ff7f50) | AI voice assistant platform      |
 | ![Vercel Deploy](https://vercel.com/button) |(https://saas-app-ranjithbabu0912s-projects.vercel.app/) |
-| ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  |(#license)       |
+| ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  |LICENSE        |
 
 ---
 
 ## 📸 Screenshots
 
-> Upload images to your GitHub repo (e.g., `/public/screenshots/`) and replace the links below.
 
 | Dashboard View | AI Companion |
 |----------------|--------------|
 | ![Dashboard Screenshot](./public/screenshots/dashboard.png) | ![Voice Assistant Screenshot](./public/screenshots/ai-companion.png) |
 
-You can also use external image hosting (like [Imgur](https://imgur.com/) or GitHub issues) for screenshots if needed.
 
 ---
 
@@ -87,7 +85,7 @@ Open your browser at http://localhost:3000.
 
 ### 🙋‍♂️ Author
 Ranjith Babu S
-Web Developer
+(Web Developer)
 
 
 
